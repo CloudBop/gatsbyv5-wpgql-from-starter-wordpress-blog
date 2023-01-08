@@ -33,8 +33,15 @@ module.exports = {
         // the only required plugin option for WordPress is the GraphQL url.
         url:
           // process.env.WPGRAPHQL_URL ||
+
+          // 
+          // - will work even if WP is set to https, but will get warnings
           `http://wpgqlgatsbyv5.local/graphql`,
-        // `https://wpgatsbydemo.wpengine.com/graphql`,
+
+        // // - will fail when WP is set to https, even if system seens to look okay
+        // `https://wpgqlgatsbyv5.local/graphql`,
+
+
       },
     },
 
